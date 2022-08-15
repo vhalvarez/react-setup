@@ -3,40 +3,36 @@ import {
     ProductCard,
     ProductImage,
     ProductTitle,
-} from "../components/ProductCard";
+} from "../components";
 
 const product = {
     id: "1",
     title: "Coffe",
 };
 
-export const ShoppingPage = () => {
-    return (
-        <div>
-            <h1>Shopping Store</h1>
-            <hr />
+export const ShoppingPage = () => (
+    <div>
+        <h1>Shopping Store</h1>
+        <hr />
 
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    flexWrap: "wrap",
-                }}
-            >
-                {/* <ProductCard product={product}>
-                   <ProductCard.Image />
-                   <ProductCard.Title title={'Cafe'}/>
-                   <ProductCard.Buttons increaseBy={function (value: number): void {
-                        throw new Error("Function not implemented.");
-                    } } counter={0} />
-                </ProductCard> */}
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+            }}
+        >
+            <ProductCard product={product}>
+                <ProductImage />
+                <ProductTitle title={"Cafe"} />
+                <ProductButtons />
+            </ProductCard>
 
-                <ProductCard product={product}>
-                    <ProductImage />
-                    <ProductTitle title={"Cafe"} />
-                    <ProductButtons />
-                </ProductCard>
-            </div>
+            <ProductCard product={product}>
+                <ProductCard.Image />
+                <ProductCard.Title title={"Cafe"} />
+                <ProductCard.Buttons />
+            </ProductCard>
         </div>
-    );
-};
+    </div>
+);
