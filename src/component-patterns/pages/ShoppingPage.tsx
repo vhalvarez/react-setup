@@ -1,4 +1,4 @@
-import { ProductCard } from "../components/ProductCard";
+import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components/ProductCard";
 
 const product = {
     id: '1',
@@ -18,7 +18,14 @@ export const ShoppingPage = () => {
                     flexWrap: "wrap",
                 }}
             >
-                <ProductCard product={product}/>
+                <ProductCard product={product}>
+                    {/* Necesita correciones */}
+                   <ProductImage />
+                   <ProductTitle title={''}/>
+                   <ProductButtons increaseBy={function (value: number): void {
+                        throw new Error("Function not implemented.");
+                    } } counter={0} />
+                </ProductCard>
             </div>
         </div>
     );
