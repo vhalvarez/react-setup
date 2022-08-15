@@ -34,12 +34,7 @@ export const ShoppingPage = () => {
                 <ProductCard product={product}>
                     <ProductImage />
                     <ProductTitle title={"Cafe"} />
-                    <ProductButtons
-                        increaseBy={function (value: number): void {
-                            throw new Error("Function not implemented.");
-                        }}
-                        counter={0}
-                    />
+                    <ProductButtons />
                 </ProductCard>
             </div>
         </div>
